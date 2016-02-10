@@ -1,0 +1,18 @@
+<p>This is the about view.</p>
+<multi-step-container steps="steps">
+    <step-container></step-container>
+    <footer class="text-right">
+      <button ng-disabled="$isFirst()" class="btn btn-default" ng-click="$previousStep()">
+          <span class="fa fa-chevron-left"></span>
+          Previous
+      </button>
+      <button ng-disabled="$isLast()" class="btn btn-default" ng-click="getForm($nextStep);">
+          Next
+          <span class="fa fa-chevron-right"></span>
+      </button>
+    </footer>
+</multi-step-container>
+<pre>
+{{ form1.$valid | json }}
+{{ form2.$valid | json }}
+</pre>
